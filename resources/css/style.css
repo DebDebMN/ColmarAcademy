@@ -1,0 +1,11 @@
+/* This is the css file for Codecademy's Unit 8 Colmar Academy project called by index.html.  */
+
+/* Style for whole page for font. */
+html{
+    font-size: 16px;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
