@@ -1,6 +1,13 @@
 /* This is the css file for Codecademy's Unit 8 Colmar Academy project called by index.html.  */
 
-/* Style for whole page for font. */
+/*  Over-all design notes:
+    - Only a "destop" and a "mobile" size windows were created.  Because the nav bar breaks just under 640px,
+      the mobile size was set to 640px.
+    - The reason the nav section was left out of the jumbotron is that the nav section didn't have
+      a border around it.  THe other sections do.
+*/
+
+/* Set up whole page for font size. */
 html{
     font-size: 16px;
 }
@@ -8,4 +15,67 @@ html{
 body {
   height: 100%;
   font-family: Arial, sans-serif;
+}
+
+/***********
+    NAV
+************/
+ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  /* border: thin solid red; ** test only */
+}
+
+.logo {
+  display: flex;
+  height: 4rem;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  align-items: center;
+}
+.logo li:first {
+  height: 2rem;
+}
+
+.logo li:nth-child(2) {
+  font-weight: bold;
+}
+.logo li:nth-child(3){
+  font-weight: normal;
+  color: gray;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.nav-btn li{
+  color: #002933;
+}
+
+.spacer {
+  height: 4rem;
+  width: 1rem;
+  background-color: lightblue;
+}
+
+@media only screen and (min-width: 641px) {
+ .mobile-nav {
+   display: none;
+ }
+}
+
+@media only screen and (max-width: 640px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+  }
 }
