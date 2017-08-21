@@ -1,10 +1,14 @@
 /* This is the css file for Codecademy's Unit 8 Colmar Academy project called by index.html.  */
 
 /*  Over-all design notes:
-    - Only a "destop" and a "mobile" size windows were created.  Because the nav bar breaks just under 640px,
-      the mobile size was set to 640px.
-    - The reason the nav section was left out of the jumbotron is that the nav section didn't have
+    - Only a "destop" and a "mobile" size windows were
+      created.  Because the nav bar breaks just under
+      640px,the mobile size was set to 640px.
+
+    - The reason the nav section was left out of the
+      jumbotron is that the nav section didn't have
       a border around it.  THe other sections do.
+
 */
 
 /* Set up whole page for font size. */
@@ -14,16 +18,21 @@ html{
 
 body {
   height: 100%;
+  max-width: 100%;
   font-family: Arial, sans-serif;
+  color: white;
 }
 
 /***********
     NAV
 ************/
-ul {
-  width: 100vw;
+.desktop-nav  {
+  max-width: 100%;
+  background-color: rgb(28, 36, 247);
   display: flex;
   justify-content: space-between;
+
+
   /* border: thin solid red; ** test only */
 }
 
@@ -32,6 +41,7 @@ ul {
   height: 4rem;
   font-size: 1.5rem;
   margin-left: 1.5rem;
+
   align-items: center;
 }
 .logo li:first {
@@ -40,10 +50,13 @@ ul {
 
 .logo li:nth-child(2) {
   font-weight: bold;
+    margin-left: 0.5rem;
 }
 .logo li:nth-child(3){
   font-weight: normal;
-  color: gray;
+  font-size: 1.2rem;
+  /* color: rgb(255, 236, 0); */
+  color: lightgray;
 }
 
 .nav-btn {
@@ -53,29 +66,122 @@ ul {
 }
 
 .nav-btn li{
-  color: #002933;
+  color: white;
 }
 
 .spacer {
   height: 4rem;
   width: 1rem;
-  background-color: lightblue;
+  margin: 0 1rem 0 1rem;
+  background-color: gold;
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 751px) {
  .mobile-nav {
    display: none;
  }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 750px) {
   .desktop-nav {
     display: none;
   }
 
   .mobile-nav {
-    width: 100vw;
+    max-width: 100vw;
     display: flex;
     justify-content: space-around;
+    padding: 1.0rem 0 0.5rem 0;
+    background-color: gold;
+  }
+}
+
+/******************
+    REST OF PAGE
+*******************/
+.jumbotron {
+  max-width: 100%;
+  border: 0.3rem solid gold;
+  display: flex;
+
+}
+
+/***********
+   BANNER
+************/
+
+.banner {
+  display: flex;
+  background-color: black;
+  color: white;
+    width: 100%;
+
+}
+.banner-img {
+    width: 60%;
+  margin: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.banner-img img{
+    width: 100%;
+}
+
+.banner-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.line-1{
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.line-2{
+  font-size: 1.0rem;
+  line-height: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.start-here {
+  height: 2rem;
+  width: 100%;
+  color: black;
+  background-color: gold;
+  text-align: center;
+}
+
+.start-here p{
+  margin: .5rem 0 .5rem 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .html {
+    font-size: 14px;
+  }
+  .jumbotron {
+    border: none;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner-text-container {
+    margin-left: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .banner-img {
+    width: 100%;
+    margin: 0rem 0 2.28rem 0;
+  }
+  .start-here {
+    width: 90%;
+    margin-bottom: 1.14rem;
   }
 }
