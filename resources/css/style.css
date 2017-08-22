@@ -1,14 +1,26 @@
-/* This is the css file for Codecademy's Unit 8 Colmar Academy project called by index.html.  */
+/*  This is the css file for Codecademy's Unit 8 Colmar Academy project
+    linked to by index.html.  */
 
-/*  Over-all design notes:
-    - Only a "destop" and a "mobile" size windows were
-      created.  Because the nav bar breaks just under
-      640px,the mobile size was set to 640px.
+/*  DESIGN NOTES:
+    = Only a "destop" and a "mobile" size windows were
+      created for this project per the spec.  Because
+      the nav bar breaks just under 640px,the mobile
+      size was set to 640px.
 
-    - The reason the nav section was left out of the
+    = The major sections, BANNER, INTRO and CATALOG,
+      were originally coded as a UL instead of a FLEXBOX.
+      Noted trade-offs (UL vs. FLEXBOX)
+        + The HTML & CSS code is shorter and looks
+          nicer using UL - ya!
+        - Much more CSS code is needed to resize
+          the UL page than if a flexbox were used.
+
+      Note that dead UL code was left for the BANNER
+      section only.
+
+    = The reason the nav section was left out of the
       jumbotron is that the nav section didn't have
       a border around it.  THe other sections do.
-
 */
 
 /* Set up whole page for font size. */
@@ -23,17 +35,44 @@ body {
   color: white;
 }
 
+h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: lighter;
+}
+
+h4 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 100;
+}
+
 /***********
     NAV
 ************/
 .desktop-nav  {
   max-width: 100%;
-  background-color: rgb(28, 36, 247);
+  background-color: rgb(0, 0, 128);/* was rgb(28, 36, 247); */
   display: flex;
   justify-content: space-between;
-
-
-  /* border: thin solid red; ** test only */
 }
 
 .logo {
@@ -54,9 +93,8 @@ body {
 }
 .logo li:nth-child(3){
   font-weight: normal;
-  font-size: 1.2rem;
-  /* color: rgb(255, 236, 0); */
-  color: lightgray;
+  color: yellow;
+  text-shadow: 1px 1px 2px black;
 }
 
 .nav-btn {
@@ -97,26 +135,44 @@ body {
 }
 
 /******************
-    REST OF PAGE
+     JUMBOTRON
 *******************/
 .jumbotron {
   max-width: 100%;
   border: 0.3rem solid gold;
   display: flex;
+  flex-direction: column;
 
 }
 
-/***********
-   BANNER
-************/
+/****************************************************
+   Parts used by all sections within JUMBOTRON
+*****************************************************/
 
-.banner {
+
+.major-section-container-flex {
   display: flex;
   background-color: black;
   color: white;
-    width: 100%;
-
+  width: 100%;
+  border: thin solid gold;
 }
+
+/*********************************************************
+/* DEAD CODE left to support a UL version of the sections.
+
+.major-section-container-ul {
+  background-color: black;
+  color: white;
+  width: 100%;
+  border: thin solid gold;
+}
+*/
+
+/************
+   BANNER
+*************/
+
 .banner-img {
     width: 60%;
   margin: 2rem 1.5rem 2rem 1.5rem;
@@ -124,6 +180,7 @@ body {
 
 .banner-img img{
     width: 100%;
+    overflow: hidden;
 }
 
 .banner-text-container {
@@ -183,5 +240,192 @@ body {
   .start-here {
     width: 90%;
     margin-bottom: 1.14rem;
+  }
+}
+/*********************************************************
+/* DEAD CODE left to support a UL version of this section.
+.banner img{
+  width: 60%;
+  margin: 2rem 1.5rem 2rem 1.5rem;
+  float: left;
+}
+
+.banner li:nth-child(2) {
+  margin-top: 20%;
+}
+
+.banner li:nth-child(3){
+  margin-bottom: 2rem;
+}
+
+.banner li:nth-child(5){
+  margin-bottom: 2rem;
+}
+
+.banner li:nth-child(6) {
+  height: 2rem;
+  width: 23%;
+  color: black;
+  background-color: gold;
+  margin: 1.5rem .5rem 0 63%;
+}
+
+.banner p{
+  text-align: center;
+  line-height: 2rem;
+}
+
+
+@media only screen and (max-width: 750px) {
+  .html {
+    font-size: 14px;
+  }
+  .jumbotron {
+    border: none;
+  }
+
+  .banner img{
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .banner li:nth-child(2) {
+    margin-top: 2.28rem;
+    margin-left: 1.14rem;
+  }
+
+  .banner li:nth-child(3){
+    margin-bottom: 2.28rem;
+    margin-left: 1.14rem;
+  }
+
+  .banner li:nth-child(4){
+    margin-left: 1.14rem;
+  }
+
+  .banner li:nth-child(5){
+    margin-bottom: 2.28rem;
+    margin-left: 1.14rem;
+  }
+
+  .banner li:nth-child(6) {
+    height: 2rem;
+    width: 90%;
+    color: black;
+    background-color: gold;
+    margin: 1.5rem 1.14rem 2.28rem 1.14rem;
+  }
+}
+*/
+
+/******************
+    INTRO
+*******************/
+
+.big-block-container {
+  width: 60%;
+  margin: 2rem 0 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.big-block-img {
+  display:flex;
+}
+
+.big-block-img img {
+  width: 100%;
+}
+
+.big-block-text h1 {
+  margin: 2rem 0 1.5rem 0;
+}
+
+.small-block-container {
+   display: flex;
+   flex-direction: column;
+   width: 35%;
+   margin: 2rem 0 2rem 2.5rem;
+   height: auto;
+}
+
+.small-block {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+}
+
+.small-block-img {
+  width: 35%;
+  margin: 1rem;
+}
+
+.small-block img {
+  width: 100%;
+  height: auto;
+}
+
+.small-block-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  justify-content: center;
+  width: 65%;
+}
+
+.small-block-text h4 {
+  margin-bottom: 1rem;
+}
+
+.small-block-text h3 {
+  margin-bottom: 1rem;
+}
+
+.small-block-text h6 {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 751px) {
+
+  /* Turn off all mobile images while in desktop mode. */
+  .small-block-img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+
+/* Turn off all desktop images while in mobile mode. */
+  .small-block-img {
+    display: none;
+  }
+/* Turn off large infromation display.  */
+  .big-block-container{
+    display: none;
+  }
+/* Enable column for smaller infromation boxes. */
+  .major-section-container-flex {
+    flex-direction: column;
+  }
+
+/* Adjust the small infromation box to full size. */
+  .small-block-container {
+     width: 100%;
+     margin: 0;
+     height: auto;
+  }
+
+/* Adjust each small information block to full size. */
+  .small-block {
+    flex-direction: column;
+    margin-bottom: 2.8rem;
+  }
+
+/* Adjust margins around text to spec. */
+  .small-block-text {
+    margin-left: 1.14rem;
+    margin-top: 1.14rem;
+    width: 100%;
   }
 }
