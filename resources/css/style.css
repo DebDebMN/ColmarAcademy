@@ -124,7 +124,9 @@ h5 {
   .desktop-nav {
     display: none;
   }
-
+  html {
+    font-size: 14px;
+  }
   .mobile-nav {
     max-width: 100vw;
     display: flex;
@@ -155,7 +157,7 @@ h5 {
   background-color: black;
   color: white;
   width: 100%;
-  border-top: thin solid gold;
+  border-bottom: thin solid gold;
 }
 
 /*********************************************************
@@ -226,6 +228,7 @@ h5 {
 
   .banner {
     flex-direction: column;
+    border-top: thin solid gold;
   }
 
   .banner-text-container {
@@ -238,7 +241,7 @@ h5 {
     margin: 0rem 0 2.28rem 0;
   }
   .start-here {
-    width: 90%;
+    width: 96%;
     margin-bottom: 1.14rem;
   }
 }
@@ -319,9 +322,12 @@ h5 {
 }
 */
 
-/******************
-    INTRO
-*******************/
+/***************************
+    INTRO & EXHIBIT
+    Much of this code
+    is shared between
+    the two major sections.
+****************************/
 
 .big-block-container {
   width: 60%;
@@ -336,6 +342,7 @@ h5 {
 
 .big-block-img img {
   width: 100%;
+  height: auto;
 }
 
 .big-block-text h1 {
@@ -401,8 +408,12 @@ h5 {
     display: none;
   }
 /* Turn off large infromation display.  */
-  .big-block-container{
+  .intro .big-block-container{
     display: none;
+  }
+
+  html {
+    font-size: 14px;
   }
 /* Enable column for smaller infromation boxes. */
   .major-section-container-flex {
@@ -448,7 +459,7 @@ h5 {
 .catalog-container {
   display: flex;
   width: 90%;
-  margin: 2rem 4.5rem 2rem 4.5rem;
+  margin: 0 4.5rem 1rem 4.5rem;
 }
 
 .class {
@@ -463,7 +474,7 @@ h5 {
 }
 
 .class-text {
-  margin: 1rem 0 1.5rem 1rem;
+  margin: 1rem 0 0rem 1rem;
 }
 
 .class-text h4 {
@@ -486,15 +497,18 @@ h5 {
     display: none;
   }
 
+  html {
+    font-size: 14px;
+  }
   .catalog-mobile {
     list-style: none;
-    border-top: thin solid gold;
     background-color: black;
-    padding: 2.28rem 0 12.28rem 1rem;
+    padding: 2.28rem 0 1.28rem 1rem;
   }
 
   .catalog-mobile ul {
     margin: 2.28rem 0 12.28rem 1rem;
+
   }
 
   .catalog-mobile h1{
@@ -508,12 +522,55 @@ h5 {
     margin-left: 1rem;
     background-color: rgb(0, 0, 128);
     border-bottom: 2rem solid black;
+
     line-height: 3rem;
   }
-/*
-  .catalog-mobile h1,
-  .catalog-mobile h2{
-    margin-left: 1rem;
+}
+/************
+   EXHIBIT
+*************/
+
+.thesis {
+  padding: 2rem 0 0 0;
+  background-color: black;
+  width: 100%;
+  border-top: thin solid gold;
+}
+
+.thesis h1 {
+  text-align: center;
+}
+
+.exhibit h1 {
+    margin: 2rem 0 2rem 0;
+    text-align: left;
   }
-*/
+
+.big-block-video {
+  margin-left: 0;
+}
+
+.big-block-video video {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 750px) {
+
+/* Turn off some desktop images while in mobile mode. */
+  .exhibit .small-block-container {
+    display: none;
+  }
+  .exhibit .big-block-text {
+    display: none;
+  }
+
+  .exhibit h1 {
+    margin: 2rem 0 2rem 0;
+  }
+
+  .exhibit .big-block-container {
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+  }
 }
