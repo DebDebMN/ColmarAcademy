@@ -345,6 +345,9 @@ h5 {
   height: auto;
 }
 
+.big-block-text{
+  width: 90%;
+}
 .big-block-text h1 {
   margin: 2rem 0 2rem 0;
 }
