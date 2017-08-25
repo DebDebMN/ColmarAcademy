@@ -186,6 +186,7 @@ a {
  }
 
  .mobile-nav a:hover,
+ .mobile-nav a:focus,
  .mobile-nav a:active {
    border-bottom: 0.5rem solid gold;
  }
@@ -300,7 +301,9 @@ a {
   }
 }
 
+
 .start-here:hover,
+.start-here:focus,
 .start-here:active {
   background-color: #0066FF;
   color: gold;
@@ -530,6 +533,7 @@ a {
   }
 
   .catalog-mobile h4:hover,
+  .catalog-mobile h4:focus,
   .catalog-mobile h4:active {
     background-color: #0066FF;
   }
