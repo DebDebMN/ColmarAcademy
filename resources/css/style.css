@@ -257,7 +257,7 @@ a {
 
 .start-here {
   height: 2rem;
-  width: 100%;
+  width: 40%;
   color: black;
   background-color: gold;
   text-align: center;
@@ -296,15 +296,15 @@ a {
     margin: 0rem 0 2.28rem 0;
   }
   .start-here {
-    width: 96%;
+    max-width: 30%;
     margin-bottom: 1.14rem;
   }
 }
 
 
-.start-here:hover,
-.start-here:focus,
-.start-here:active {
+.start-here a:hover,
+.start-here a:focus,
+.start-here a:active {
   background-color: #0066FF;
   color: gold;
 }
@@ -392,6 +392,20 @@ a {
   margin-top: 2rem;
 }
 
+.small-block-text h5 {
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2.1rem;
+  background-color: black;
+  transition: all 200ms ease-in 150ms;
+}
+
+.small-block-text h5:hover {
+  background-color: #0066FF;
+  color: white;
+}
+
 
 
 @media only screen and (min-width: 751px) {
@@ -437,6 +451,13 @@ a {
     margin-top: 1.14rem;
     width: 100%;
   }
+}
+
+.small-block-text h5:hover,
+.small-block-text h5:focus,
+.small-block-text h5:active {
+  background-color: #0066FF;
+  color: white;
 }
 
 /******************
