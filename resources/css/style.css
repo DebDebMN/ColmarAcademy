@@ -185,7 +185,8 @@ a {
    margin-left: 0rem;
  }
 
- .mobile-nav a:hover {
+ .mobile-nav a:hover,
+ .mobile-nav a:active {
    border-bottom: 0.5rem solid gold;
  }
 }
@@ -207,7 +208,7 @@ a {
 }
 
 /****************************************************
-   Parts used by all sections within JUMBOTRON
+   Part used by all sections within JUMBOTRON
 *****************************************************/
 
 .major-section-container-flex {
@@ -217,17 +218,6 @@ a {
   width: 100%;
   border-bottom: thin solid gold;
 }
-
-/*********************************************************
-/* DEAD CODE left to support a UL version of the sections.
-
-.major-section-container-ul {
-  background-color: black;
-  color: white;
-  width: 100%;
-  border: thin solid gold;
-}
-*/
 
 /************
    BANNER
@@ -276,7 +266,6 @@ a {
 .start-here:hover {
   background-color: #0066FF;
   color: gold;
-  /*margin: .4rem 0 2rem 0; */
 }
 
 .start-here p {
@@ -310,82 +299,13 @@ a {
     margin-bottom: 1.14rem;
   }
 }
-/*********************************************************
-/* DEAD CODE left to support a UL version of this section.
-.banner img{
-  width: 60%;
-  margin: 2rem 1.5rem 2rem 1.5rem;
-  float: left;
+
+.start-here:hover,
+.start-here:active {
+  background-color: #0066FF;
+  color: gold;
 }
 
-.banner li:nth-child(2) {
-  margin-top: 20%;
-}
-
-.banner li:nth-child(3){
-  margin-bottom: 2rem;
-}
-
-.banner li:nth-child(5){
-  margin-bottom: 2rem;
-}
-
-.banner li:nth-child(6) {
-  height: 2rem;
-  width: 23%;
-  color: black;
-  background-color: gold;
-  margin: 1.5rem .5rem 0 63%;
-}
-
-.banner p{
-  text-align: center;
-  line-height: 2rem;
-}
-
-
-@media only screen and (max-width: 750px) {
-  .html {
-    font-size: 14px;
-  }
-  .jumbotron {
-    border: none;
-  }
-
-  .banner img{
-    width: 100%;
-    margin: 0 auto;
-    float: none;
-  }
-
-  .banner li:nth-child(2) {
-    margin-top: 2.28rem;
-    margin-left: 1.14rem;
-  }
-
-  .banner li:nth-child(3){
-    margin-bottom: 2.28rem;
-    margin-left: 1.14rem;
-  }
-
-  .banner li:nth-child(4){
-    margin-left: 1.14rem;
-  }
-
-  .banner li:nth-child(5){
-    margin-bottom: 2.28rem;
-    margin-left: 1.14rem;
-  }
-
-  .banner li:nth-child(6) {
-    height: 2rem;
-    width: 90%;
-    color: black;
-    background-color: gold;
-    margin: 1.5rem 1.14rem 2.28rem 1.14rem;
-  }
-}
-*/
 
 /***************************
     INTRO & EXHIBIT
@@ -609,7 +529,8 @@ a {
     line-height: 3rem;
   }
 
-  .catalog-mobile h4:hover {
+  .catalog-mobile h4:hover,
+  .catalog-mobile h4:active {
     background-color: #0066FF;
   }
 
