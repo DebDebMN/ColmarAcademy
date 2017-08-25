@@ -53,7 +53,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.4rem;
   font-weight: lighter;
 }
@@ -68,6 +68,29 @@ h5 {
   font-size: 1rem;
   line-height: 1.4rem;
   font-weight: 100;
+  font-weight: bold;
+  color: gold;
+}
+
+
+
+
+
+/* Style navigation links for desktop view. */
+
+
+a:link,
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: gold;
+}
+
+a {
+  text-decoration: none;
 }
 
 /***********
@@ -103,6 +126,7 @@ h5 {
   font-weight: bold;
     margin-left: 0.5rem;
 }
+
 .logo li:nth-child(3){
   font-weight: normal;
   color: yellow;
@@ -158,6 +182,11 @@ h5 {
 
  .logo {
    font-size: 1.2rem;
+   margin-left: 0rem;
+ }
+
+ .mobile-nav a:hover {
+   border-bottom: 0.5rem solid gold;
  }
 }
 
@@ -205,7 +234,7 @@ h5 {
 *************/
 
 .banner-img {
-    width: 60%;
+  width: 60%;
   margin: 2rem 1.5rem 2rem 1.5rem;
 }
 
@@ -241,11 +270,19 @@ h5 {
   color: black;
   background-color: gold;
   text-align: center;
+  transition:  background-color 100ms ease-in 100ms;
 }
 
-.start-here p{
+.start-here:hover {
+  background-color: #0066FF;
+  color: gold;
+  /*margin: .4rem 0 2rem 0; */
+}
+
+.start-here p {
   margin: .5rem 0 2rem 0;
 }
+
 
 @media only screen and (max-width: 750px) {
 
@@ -374,11 +411,17 @@ h5 {
 }
 
 .big-block-text{
-  width: 90%;
+  width: 80%;
 }
 
 .big-block-text h1 {
   margin: 2rem 0 2rem 0;
+}
+
+.big-block-text p{
+  font-size: 1.3rem;
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 1.4rem;
 }
 
 .small-block-container {
@@ -410,6 +453,7 @@ h5 {
   flex-direction: column;
   margin-left: 1.5rem;
   justify-content: center;
+
   width: 65%;
 }
 
@@ -424,6 +468,8 @@ h5 {
 .small-block-text h6 {
   margin-top: 2rem;
 }
+
+
 
 @media only screen and (min-width: 751px) {
 
@@ -494,8 +540,10 @@ h5 {
 .class {
   display: flex;
   flex-direction: column;
+  transition: width 200ms ease-in 150ms;
   width: 33%;
   margin: 2rem 2rem 0 0;
+
 }
 
 .class-img img {
@@ -508,15 +556,21 @@ h5 {
 
 .class-text h4 {
   margin: 0 0 1rem 0;
+  color: white;
+  transition: color 200ms ease-in 150ms;
 }
 
 .class-text p{
   margin: 0.5rem 0 0.5rem 0;
 }
 
+.class:hover {
+  width:50%;
+}
+
 @media only screen and (min-width: 751px) {
 
-  /* Turn off all mobile images while in desktop mode. */
+  /* Turn off catalog mobile images while in desktop mode. */
   .catalog-mobile {
     display: none;
   }
@@ -551,9 +605,14 @@ h5 {
     margin-left: 1rem;
     background-color: rgb(0, 0, 128);
     border-bottom: 2rem solid black;
-
+    transition: background-color 100ms ease-in 150ms;
     line-height: 3rem;
   }
+
+  .catalog-mobile h4:hover {
+    background-color: #0066FF;
+  }
+
 }
 /************
    EXHIBIT
@@ -573,7 +632,7 @@ h5 {
 .exhibit h1 {
     margin: 2rem 0 2rem 0;
     text-align: left;
-  }
+}
 
 .big-block-video {
   margin-left: 0;
@@ -586,7 +645,7 @@ h5 {
 
 @media only screen and (max-width: 750px) {
 
-/* Turn off some desktop images while in mobile mode. */
+  /* Turn off some desktop images while in mobile mode. */
   .exhibit .small-block-container {
     display: none;
   }
