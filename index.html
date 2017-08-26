@@ -14,12 +14,12 @@
 <!-- There are six seperate parts to this front page:
       NAV     - Navigation section
       BANNER  - Main banner to catch attention
-      INTRO   - Sales line, plus admin business
+      INTRO   - Information, plus admin business
       CATALOG - Pictures and lists of courses
       EXHIBIT - Thesis exhibits
       FOOTER  - Copyright, terms and privacy
 
-      Note that these notes are for the author and not necessary for the
+      Note that this infromation is for the author and not necessary for the
       expert reviewer of this submitted project.
 -->
 
@@ -28,6 +28,8 @@
     NAV
   **********
   -->
+  <!-- Desktop navigation bar consists of a logo, school name, and links.
+       Note that a full height spacer is used between the links text.  -->
   <ul class="desktop-nav">
     <div class="logo">
       <li><img src="./resources/images/ic-logo-white.png"/></li>
@@ -45,6 +47,7 @@
     </div>
   </ul>
 
+  <!-- Mobile navigation consists of logo, school name, and icons. -->
   <ul class="mobile-nav">
     <div class="logo">
       <li><img src="./resources/images/ic-logo-white.png"/></li>
@@ -58,7 +61,8 @@
 
 
 
-  <!--   This encompasses the entire page except for the nav section above. -->
+  <!-- The jumbotron encompasses the entire site except for the nav an footer
+       sections at the top and bottom of the page. -->
   <div class="jumbotron">
 
 
@@ -68,7 +72,8 @@
     **********
     -->
 
-
+    <!-- The banner consists of two major sections:  Left section
+        contains an image only.  Right side, only text. -->
     <div class="major-section-container-flex banner">
       <div class="banner-img">
         <img src="./resources/images/banner.jpg"/>
@@ -98,8 +103,8 @@
     <div class="major-section-container-flex intro">
 
       <!-- Big block container consists of the 1st 60% of the window; left side.
-           Small block container consists of the right hand side of the windows
-           and holds all of the smaller data blocks.
+           Small block container is placed on the right side of the window
+           and holds all of the smaller picture and data blocks.
       -->
       <div class="big-block-container">
         <div class="big-block-img">
@@ -115,7 +120,8 @@
 
       <div class="small-block-container">
 
-        <!-- ORIENTATION data block -->
+        <!-- ORIENTATION data block consists of a picture with text and a "read more"
+             to the right.-->
         <div class="small-block">
           <div class="small-block-img">
             <img src="./resources/images/information-orientation.jpg"/>
@@ -130,7 +136,8 @@
           </div>
         </div>
 
-      <!-- OUR CAMPUS data block -->
+      <!-- OUR CAMPUS data block consists of a picture with text and a "read more"
+           to the right.-->
         <div class="small-block">
           <div class="small-block-img">
             <img src="./resources/images/information-campus.jpg"/>
@@ -145,7 +152,8 @@
           </div>
         </div>
 
-        <!-- OUR GUEST LECTURE data block -->
+        <!-- OUR GUEST LECTURE data block consists of a picture with text and a "read more"
+             to the right.-->
         <div class="small-block">
           <div class="small-block-img">
             <img src="./resources/images/information-guest-lecture.jpg"/>
@@ -160,162 +168,190 @@
             <h5>Read more</h5>
           </div>
         </div>
+
       </div> <!-- for small-block-container-->
 
     </div> <!--for major-section-container-flex  -->
 
 
 
-  <!--
-  ***********
-    CATALOG
-  ***********
-  -->
-
-  <div class="major-section-container-flex catalog">
-    <h1>Start learning</h1>
-
-    <div class="catalog-container">
-      <div class="class">
-        <div class="class-img">
-          <img src="./resources/images/course-software.jpg"/>
-        </div>
-        <div class="class-text">
-          <h4>Software engineering</h4>
-          <p>COURSES</p>
-          <p>Web Development, Mobile</p>
-          <p>Developmemt, iOT, APIs</p>
-        </div>
-      </div>
-
-      <div class="class">
-        <div class="class-img">
-          <img src="./resources/images/course-computer-art.jpg"/>
-        </div>
-        <div class="class-text">
-          <h4>Computer art</h4>
-          <p>COURSES</p>
-          <p>Imaging &amp; Design, Web Design,</p>
-          <p>Motion Graphics &amp; Visual Effects</p>
-          <p>Computer Animation</p>
-        </div>
-      </div>
-
-      <div class="class">
-        <div class="class-img">
-          <img src="./resources/images/course-design.jpg"/>
-        </div>
-        <div class="class-text">
-          <h4>Design</h4>
-          <p>COURSES</p>
-          <p>User Experience Design, User</p>
-          <p>Reserch, Visual Design</p>
-        </div>
-      </div>
-
-    </div>  <!-- for catalog-container -->
-
-    <div class="catalog-container">
-      <div class="class">
-        <div class="class-img">
-          <img src="./resources/images/course-data.jpg"/>
-        </div>
-        <div class="class-text">
-          <h4>Data</h4>
-          <p>COURSES</p>
-          <p>Data Science, Big Data, SQL, Data</p>
-          <p>Visualization</p>
-        </div>
-      </div>
-
-      <div class="class">
-        <div class="class-img">
-          <img src="./resources/images/course-business.jpg"/>
-        </div>
-        <div class="class-text">
-          <h4>Business</h4>
-          <p>COURSES</p>
-          <p>Product Development, Business</p>
-          <p>Development, Startup<p>
-        </div>
-      </div>
-
-      <div class="class">
-        <div class="class-img">
-          <img src="./resources/images/course-marketing.jpg"/>
-        </div>
-        <div class="class-text">
-          <h4>Marketing</h4>
-          <p>COURSES</p>
-          <p>Analytics, Content Marketing,</p>
-          <p>Mobile Marketing</p>
-        </div>
-      </div>
-    </div>  <!-- for catalog-container -->
-  </div> <!-- for major-section-container-flex -->
-
-  <ul class="catalog-mobile">
-    <li><h1>Start learning</h1></li>
-    <li><h4>Software engineering</h4></li>
-    <li><h4>Computer art</h4></li>
-    <li><h4>Design</h4></li>
-    <li><h4>Data</h4></li>
-    <li><h4>Business</h4></li>
-    <li><h4>Marketing</h4></li>
-  </ul>
-
-
-  <!--
-  ***********
-    EXHIBIT
-  ***********
-  -->
-  <div class="thesis"><h1>Thesis exhibit</h1></div>
-  <div class="major-section-container-flex exhibit">
-
-    <!-- Big block container consists of the 1st 60% of the window; left side.
-         Small block container consists of the right hand side of the windows
-         and holds all of the smaller data blocks.
+    <!--
+    ***********
+      CATALOG
+    ***********
     -->
-    <div class="big-block-container">
-      <div class="big-block-video">
-        <video src="./resources/videos/thesis.mp4" autoplay loop>Video not supported</video>
-      </div>
-      <div class="big-block-text">
-          <h1>Reimagine urban</h1>
-          <p>"Curbitur vitae libero in ipsum porttitor consequat.  Aliquam et commodo lectus, nec consequat neque.  Sed non accumsan urna.  Phasellus sed consequat ex.  Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
-      </div>
+
+    <div class="major-section-container-flex catalog">
+
+      <!--  The Catalog section contists of a header line, followed by 6 course blocks,
+            3 per row. Each course block contains a picture with text underneith.
+            Note that the courses were split into rows, which assures that the
+            courses don't push or pull from one line to another if the display is
+            huge.
+      -->
+      <h1>Start learning</h1>
+
+      <!-- First row of courses -->
+      <div class="catalog-container">
+
+        <!-- Software Engineering course-->
+        <div class="class">
+          <div class="class-img">
+            <img src="./resources/images/course-software.jpg"/>
+          </div>
+          <div class="class-text">
+            <h4>Software engineering</h4>
+            <p>COURSES</p>
+            <p>Web Development, Mobile</p>
+            <p>Developmemt, iOT, APIs</p>
+          </div>
+        </div>
+
+        <!-- Computer Art course -->
+        <div class="class">
+          <div class="class-img">
+            <img src="./resources/images/course-computer-art.jpg"/>
+          </div>
+          <div class="class-text">
+            <h4>Computer art</h4>
+            <p>COURSES</p>
+            <p>Imaging &amp; Design, Web Design,</p>
+            <p>Motion Graphics &amp; Visual Effects</p>
+            <p>Computer Animation</p>
+          </div>
+        </div>
+
+        <!-- Design course -->
+        <div class="class">
+          <div class="class-img">
+            <img src="./resources/images/course-design.jpg"/>
+          </div>
+          <div class="class-text">
+            <h4>Design</h4>
+            <p>COURSES</p>
+            <p>User Experience Design, User</p>
+            <p>Reserch, Visual Design</p>
+          </div>
+        </div>
+
+      </div>  <!-- for catalog cpurses, first row -->
+
+      <!-- Second row of courses -->
+      <div class="catalog-container">
+
+        <!-- Data course -->
+        <div class="class">
+          <div class="class-img">
+            <img src="./resources/images/course-data.jpg"/>
+          </div>
+          <div class="class-text">
+            <h4>Data</h4>
+            <p>COURSES</p>
+            <p>Data Science, Big Data, SQL, Data</p>
+            <p>Visualization</p>
+          </div>
+        </div>
+
+        <!-- Business course -->
+        <div class="class">
+          <div class="class-img">
+            <img src="./resources/images/course-business.jpg"/>
+          </div>
+          <div class="class-text">
+            <h4>Business</h4>
+            <p>COURSES</p>
+            <p>Product Development, Business</p>
+            <p>Development, Startup<p>
+          </div>
+        </div>
+
+        <!-- Marketing course -->
+        <div class="class">
+          <div class="class-img">
+            <img src="./resources/images/course-marketing.jpg"/>
+          </div>
+          <div class="class-text">
+            <h4>Marketing</h4>
+            <p>COURSES</p>
+            <p>Analytics, Content Marketing,</p>
+            <p>Mobile Marketing</p>
+          </div>
+        </div>
+      </div>  <!-- for catalog courses, second row -->
+
+    </div> <!-- for major-section-container-flex -->
+
+    <!-- Catalog section display for mobile devices.
+        Note that only the course titles are displayed.
+      -->
+    <ul class="catalog-mobile">
+      <li><h1>Start learning</h1></li>
+      <li><h4>Software engineering</h4></li>
+      <li><h4>Computer art</h4></li>
+      <li><h4>Design</h4></li>
+      <li><h4>Data</h4></li>
+      <li><h4>Business</h4></li>
+      <li><h4>Marketing</h4></li>
+    </ul>
+
+
+    <!--
+    ***********
+      EXHIBIT
+    ***********
+    -->
+    <!--  The exhibit section consists of a header, a movie plus textual information
+        f or the major exhibit, and picture and description of the other thesis exhibits. -->
+
+    <div class="thesis">
+      <h1>Thesis exhibit</h1>
     </div>
 
+    <!-- Big block container consists of the 1st 60% of the window; left side.
+         Small block container is placed on the right side of the window
+         and holds all of the smaller picture and data blocks.
+    -->
+    <div class="major-section-container-flex exhibit">
 
-    <div class="small-block-container">
-
-      <!--FISMA data block -->
-      <div class="small-block">
-        <div class="small-block-img">
-          <img src="./resources/images/thesis-fisma.jpg"/>
+      <!-- Major exhibit with movie and description text.  -->
+      <div class="big-block-container">
+        <div class="big-block-video">
+          <video src="./resources/videos/thesis.mp4" autoplay loop>Video not supported</video>
         </div>
-        <div class="small-block-text">
-          <h4>Fisma: Design and Prototype</h4>
-          <h3>Designer showcase of new prototyoe product</h3>
-          <h3>prototyoe product</h3>
-        </div>
-      </div>
-
-    <!-- NOW AND THEN data block -->
-      <div class="small-block">
-        <div class="small-block-img">
-          <img src="./resources/images/thesis-now-and-then.jpg"/>
-        </div>
-        <div class="small-block-text">
-          <h4>Now and then</h4>
-          <h3>Research study about New York</h3>
+        <div class="big-block-text">
+            <h1>Reimagine urban</h1>
+            <p>"Curbitur vitae libero in ipsum porttitor consequat.  Aliquam et commodo lectus, nec consequat neque.  Sed non accumsan urna.  Phasellus sed consequat ex.  Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
         </div>
       </div>
 
-    </div> <!-- for small-block-container-->
+      <!-- Picture and description for other exhibits.  -->
+      <div class="small-block-container">
 
-  </div> <!--for major-section-container-flex  -->
+        <!--FISMA thesis picture and description -->
+        <div class="small-block">
+          <div class="small-block-img">
+            <img src="./resources/images/thesis-fisma.jpg"/>
+          </div>
+          <div class="small-block-text">
+            <h4>Fisma: Design and Prototype</h4>
+            <h3>Designer showcase of new prototyoe product</h3>
+          </div>
+        </div>
+
+        <!-- NOW AND THEN thesis picture and description -->
+        <div class="small-block">
+          <div class="small-block-img">
+            <img src="./resources/images/thesis-now-and-then.jpg"/>
+          </div>
+          <div class="small-block-text">
+            <h4>Now and then</h4>
+            <h3>Research study about New York</h3>
+          </div>
+        </div>
+
+      </div> <!-- for small-block-container-->
+
+    </div> <!--for major-section-container-flex  -->
 
 
   </div> <!-- for jumbotron -->
@@ -327,6 +363,7 @@
   *************
   -->
 
+  <!-- Copyright, plus Terms and Privacy all on one line.  -->
   <ul class="footer">
     <div class="copyright">
       <li>&copy; 2016 Colmar Academy. All rights reserved.</li>

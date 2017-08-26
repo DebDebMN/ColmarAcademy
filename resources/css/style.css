@@ -1,5 +1,4 @@
-/*  This is the css file for Codecademy's Unit 8 Colmar Academy project
-    linked to by index.html.  */
+/*  This is the css file for Codecademy's Unit 8 Colmar Academy project.  */
 
 /*  CHANGES MADE TO ORIGINAL SPEC:
     = Received strong feedback that the mobile site needs to have
@@ -16,19 +15,18 @@
       were originally coded as a UL instead of a FLEXBOX.
       Noted trade-offs (UL vs. FLEXBOX)
         + The HTML & CSS code is shorter and looks
-          nicer using UL - ya!
-        - Much more CSS code is needed to resize
-          the UL page than if a flexbox were used.
+          cleaner using UL - ya!
+        - Much more CSS code was needed to resize
+          the UL page than was needed for flexboxes.
 
-      Note that dead UL code was left for the BANNER
-      section only.
+      In the emd, flexbox won out.
 
-    = The reason the nav section was left out of the
-      jumbotron is that the nav section didn't have
-      a border around it.  THe other sections do.
+    = The reason the nav  and footer sections were left
+      out of the jumbotron is that these sections
+      didn't have a border around it.  THe other sections do.
 */
 
-/* Set up whole page for font size. */
+/* Set up desktop font size. */
 html{
     font-size: 16px;
 }
@@ -40,6 +38,7 @@ body {
   color: white;
 }
 
+/* Set up fonts for each of the special fonts. */
 h1 {
   font-size: 2.8rem;
   font-weight: bold;
@@ -73,11 +72,7 @@ h5 {
 }
 
 
-
-
-
 /* Style navigation links for desktop view. */
-
 
 a:link,
 a:visited {
@@ -96,6 +91,10 @@ a {
 /***********
     NAV
 ************/
+
+/* Set up the navigation section size and color, and fix it at top of page.
+   Set up flexbox for inner elements.
+*/
 .desktop-nav  {
   width: 100%;
   background-color: rgb(0, 0, 128);
@@ -110,18 +109,22 @@ a {
   border-bottom: 0.3rem solid gold;
 }
 
+/* Set the margins of logo per spec. */
 .logo {
-  display: flex;
   height: 4rem;
   font-size: 1.5rem;
   margin-left: 1.5rem;
 
+  display: flex;
   align-items: center;
 }
+
+/* Set the height of the logo per spec. */
 .logo li:first {
   height: 2rem;
 }
 
+/* Style the college name, different for each word. */
 .logo li:nth-child(2) {
   font-weight: bold;
     margin-left: 0.5rem;
@@ -129,20 +132,23 @@ a {
 
 .logo li:nth-child(3){
   font-weight: normal;
-  color: yellow;
+  color: gold;
   text-shadow: 1px 1px 2px black;
 }
 
+/* Set the right margin per spec.  */
 .nav-btn {
+  margin-right: 1.5rem;
+
   display: flex;
   align-items: center;
-  margin-right: 1.5rem;
 }
 
 .nav-btn li{
   color: white;
 }
 
+/* Create the spacers between the nav links per spec. */
 .spacer {
   height: 4rem;
   width: 1rem;
@@ -150,41 +156,50 @@ a {
   background-color: gold;
 }
 
+/* Turn off the mobile nav when display is desktop. */
 @media only screen and (min-width: 751px) {
  .mobile-nav {
    display: none;
-
  }
 }
 
+/* When in mobile display mode, turn off the desktop display and... */
 @media only screen and (max-width: 750px) {
   .desktop-nav {
     display: none;
   }
+
+  /* Set font smaller.  */
   html {
     font-size: 14px;
   }
+
+  /* Style the navigation section size and color, and fix it at top of page.
+     Set up flexbox for inner elements.
+  */
   .mobile-nav {
     width: 100%;
     height: 4.5rem;
     background-color: rgb(0, 0, 128);
     border-bottom: thin solid gold;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
+/*  Reset the logo's size for mobile display. */
  .logo {
    font-size: 1.2rem;
    margin-left: 0rem;
  }
 
+/* According the Stackoverflow.com, this should work for mobile devices. */
  .mobile-nav a:hover,
  .mobile-nav a:focus,
  .mobile-nav a:active {
@@ -195,15 +210,18 @@ a {
 /******************
      JUMBOTRON
 *******************/
+
+/*  Set up jumbotron to "slide under" the navigation bar.  */
 .jumbotron {
   position: relative;
   top: 4rem;
   max-width: 100%;
 
+  /* Style gold border on each side of jumbotron. */
   border-left: 0.3rem solid gold;
   border-right: 0.3rem solid gold;
-  border-left: 0.3rem solid gold;
 
+  /* Set up flexbox for all sections. */
   display: flex;
   flex-direction: column;
 }
@@ -213,27 +231,33 @@ a {
 *****************************************************/
 
 .major-section-container-flex {
+  /* Continue flex for each major section. */
   display: flex;
+
+  /* Style small gold line between each major section. */
+  border-bottom: thin solid gold;
   background-color: black;
   color: white;
   width: 100%;
-  border-bottom: thin solid gold;
 }
 
 /************
    BANNER
 *************/
 
+/* Set margins of large image per spec.  */
 .banner-img {
   width: 60%;
   margin: 2rem 1.5rem 2rem 1.5rem;
 }
 
+/* Ensure that large image resizes without losing aspect ratio. */
 .banner-img img{
-    width: 100%;
-    overflow: hidden;
+  max-width: 100%;
+  max-height: auto;
 }
 
+/* Set up text section's flexbox. */
 .banner-text-container {
   display: flex;
   flex-direction: column;
@@ -241,6 +265,7 @@ a {
   align-items: flex-start;
 }
 
+/* Style each line separately and ensure spacing per spec. */
 .line-1{
   font-size: 2.2rem;
   font-weight: bold;
@@ -255,20 +280,23 @@ a {
   margin-bottom: 2rem;
 }
 
+/* Style "start-here" button and set up transition on hover. */
 .start-here {
   height: 2rem;
   width: 40%;
   color: black;
   background-color: gold;
   text-align: center;
-  transition:  background-color 100ms ease-in 100ms;
+  transition:  all 100ms ease-in 100ms;
 }
 
+/* Change background color of button and text color when hovering. */
 .start-here:hover {
   background-color: #0066FF;
   color: gold;
 }
 
+/* Center button text within button. */
 .start-here p {
   margin: .5rem 0 2rem 0;
 }
@@ -276,32 +304,38 @@ a {
 
 @media only screen and (max-width: 750px) {
 
+  /* No borders for big jumbtron when on mobile. */
+  /* Also, ensure proper spacing for different height in Nav bar. */
   .jumbotron {
     border: none;
     top: 4.5rem;
   }
 
+  /* Set up flex for banner section. */
   .banner {
     flex-direction: column;
-    /* border-top: thin solid gold;  */
   }
 
+  /* Set the margins per spec. */
   .banner-text-container {
     margin-left: 1.4rem;
     margin-bottom: 1.4rem;
   }
 
+  /* Display banner from left to right margin per spec. */
   .banner-img {
     width: 100%;
     margin: 0rem 0 2.28rem 0;
   }
+
+  /* Set the bottom margin per spec for start-here button. */
   .start-here {
     max-width: 30%;
     margin-bottom: 1.14rem;
   }
 }
 
-
+/* According the Stackoverflow.com, this should work for mobile devices. */
 .start-here a:hover,
 .start-here a:focus,
 .start-here a:active {
@@ -317,95 +351,117 @@ a {
     the two major sections.
 ****************************/
 
+/* Set up the space for the big image ensurings margins per spec. */
+/* Additionally, carry on flexbox. */
 .big-block-container {
   width: 60%;
   margin: 2rem 0 2rem 1.5rem;
+
   display: flex;
   flex-direction: column;
 }
 
+/* Ensure aspect ratio for large picture. */
 .big-block-img {
-  display:flex;
+  display:block;
 }
-
 .big-block-img img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
 }
 
+/* Set up width of text box so that it doesn't press look funny below image. */
 .big-block-text{
   width: 80%;
 }
 
+/* Set up text box margins per spec. */
 .big-block-text h1 {
   margin: 2rem 0 2rem 0;
 }
 
+/* Quotes are used.  Text is styled with new font.  */
 .big-block-text p{
   font-size: 1.3rem;
   font-family: "Libre Franklin", sans-serif;
   line-height: 1.4rem;
 }
 
+/* Set up small-block container with margins per spec. */
+/* Set up flex for small container. */
 .small-block-container {
-   display: flex;
-   flex-direction: column;
    width: 35%;
    margin: 2rem 0 2rem 2.5rem;
    height: auto;
+
+   display: flex;
+   flex-direction: column;
 }
 
+/* Set the bottom margin per spec and set up flex for small block items. */
 .small-block {
   display: flex;
   flex-direction: row;
   margin-bottom: 3rem;
 }
 
+/* Set the margins per spec for each image. */
 .small-block-img {
   width: 35%;
   margin: 1rem;
 }
 
+
+/* Ensure that small image resizes without losing aspect ratio. */
 .small-block img {
   width: 100%;
   height: auto;
 }
 
+/* Set the margin per spec.  */
+/* Set up flex for small text box. */
 .small-block-text {
+  margin-left: 1.5rem;
+  width: 65%;
+
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
   justify-content: center;
-
-  width: 65%;
 }
 
+/* Set the margin per spec.  */
 .small-block-text h4 {
   margin-bottom: 1rem;
 }
 
+/* Set the margin per spec.  */
 .small-block-text h3 {
   margin-bottom: 1rem;
 }
 
+/* Set the margins per spec.  */
 .small-block-text h6 {
   margin-top: 2rem;
 }
 
+/* Set up button around read-more */
+/* Set up transition when hovered over. */
 .small-block-text h5 {
   width: 6rem;
   height: 2rem;
   text-align: center;
   line-height: 2.1rem;
   background-color: black;
+
   transition: all 200ms ease-in 150ms;
 }
 
+
+/* Change background color of button and text color when hovering. */
 .small-block-text h5:hover {
   background-color: #0066FF;
   color: white;
 }
-
 
 
 @media only screen and (min-width: 751px) {
@@ -418,34 +474,35 @@ a {
 
 @media only screen and (max-width: 750px) {
 
-/* Turn off all desktop images while in mobile mode. */
+  /* Turn off all desktop images while in mobile mode. */
   .small-block-img {
     display: none;
   }
-/* Turn off large infromation display.  */
+
+  /* Turn off large infromation display.  */
   .intro .big-block-container{
     display: none;
   }
 
-/* Enable column for smaller infromation boxes. */
+  /* Enable column for smaller infromation boxes. */
   .major-section-container-flex {
     flex-direction: column;
   }
 
-/* Adjust the small infromation box to full size. */
+  /* Adjust the small infromation box to full size. */
   .small-block-container {
      width: 100%;
      margin: 2.8rem 0 0 0;
      height: auto;
   }
 
-/* Adjust each small information block to full size. */
+  /* Adjust each small information block to full size. */
   .small-block {
     flex-direction: column;
     margin-bottom: 2.8rem;
   }
 
-/* Adjust margins around text to spec. */
+  /* Adjust margins around text to spec. */
   .small-block-text {
     margin-left: 1.14rem;
     margin-top: 1.14rem;
@@ -453,6 +510,7 @@ a {
   }
 }
 
+/* According the Stackoverflow.com, this should work for mobile devices. */
 .small-block-text h5:hover,
 .small-block-text h5:focus,
 .small-block-text h5:active {
@@ -464,106 +522,141 @@ a {
     CATALOG
 *******************/
 
+/* Set the margin per spec.  */
+/* Set up flexbox for inner containers.  */
 .catalog {
+  padding: 2rem 0 2rem 0;
+
   display: flex;
   flex-direction: column;
-  padding: 2rem 0 2rem 0;
 }
 
+/* Style header line.  */
 .catalog h1 {
   width: 100%;
   text-align: center;
 }
 
+/* Set the margins per spec.  */
+/* Set up flex for inner items. */
 .catalog-container {
-  display: flex;
   width: 90%;
   margin: 0 4.5rem 1rem 4.5rem;
+
+  display: flex;
 }
 
+/* Set up each class container for three each per line. */
+/* Set up flex for inner items. */
+/* Set up transition for a larger class picture when any portion of the
+   class box is hovered over. */
 .class {
-  display: flex;
-  flex-direction: column;
-  transition: width 200ms ease-in 150ms;
   width: 33%;
   margin: 2rem 2rem 0 0;
 
+  display: flex;
+  flex-direction: column;
+
+  transition: width 200ms ease-in 150ms;
 }
 
-.class-img img {
-  width: 100%;
-}
-
-.class-text {
-  margin: 1rem 0 0rem 1rem;
-}
-
-.class-text h4 {
-  margin: 0 0 1rem 0;
-  color: white;
-  transition: color 200ms ease-in 150ms;
-}
-
-.class-text p{
-  margin: 0.5rem 0 0.5rem 0;
-}
-
+/* Change the size of the class image when hovered over. */
 .class:hover {
   width:50%;
 }
 
-@media only screen and (min-width: 751px) {
+/* Allow class image to span across entire alotted space. */
+.class-img img {
+  width: 100%;
+}
+
+/* Set the margins per spec.  */
+.class-text {
+  margin: 1rem 0 0rem 1rem;
+}
+
+/* Set the text margins per spec.  */
+.class-text h4 {
+  margin: 0 0 1rem 0;
+}
+
+/* Set the margins per spec.  */
+.class-text p{
+  margin: 0.5rem 0 0.5rem 0;
+}
+
 
   /* Turn off catalog mobile images while in desktop mode. */
+@media only screen and (min-width: 751px) {
   .catalog-mobile {
     display: none;
   }
 }
 
+/* When in mobile mode: */
 @media only screen and (max-width: 750px) {
 
-/* Turn off all desktop images while in mobile mode. */
+  /* Turn off all catalog desktop images while in mobile mode. */
   .catalog {
     display: none;
   }
 
+  /* Set up background and sizing for list of classes.  */
   .catalog-mobile {
     list-style: none;
     background-color: black;
     padding: 2.28rem 0 1.28rem 1rem;
   }
 
+  /* Set the margins per spec for box. */
   .catalog-mobile ul {
-    margin: 2.28rem 0 12.28rem 1rem;
-
+    margin: 2.28rem 0 2.28rem 1rem;
   }
 
+  /* Set the margins per spec. */
   .catalog-mobile h1{
     margin-bottom: 1.14rem;
     text-align: center;
   }
+
+  /* Set up button for the classes including color.  Left
+     justify the text in each button, and center vertically.
+     Set the margins per spec.  */
+  /* Place a gold border at the bottom to mark the boundry. */
+  /* Set up a transition of the class button when hovered over.  */
+
   .catalog-mobile h4{
     width: 85%;
     height: 3rem;
     padding-left: 1rem;
     margin-left: 1rem;
     background-color: rgb(0, 0, 128);
-    border-bottom: 2rem solid black;
-    transition: background-color 100ms ease-in 150ms;
     line-height: 3rem;
+
+    border-bottom: 2rem solid black;
+
+    transition: background-color 100ms ease-in 150ms;
+
   }
 
+  /* According the Stackoverflow.com, this should work for mobile devices. */
   .catalog-mobile h4:hover,
   .catalog-mobile h4:focus,
   .catalog-mobile h4:active {
     background-color: #0066FF;
   }
-
 }
+
 /************
    EXHIBIT
 *************/
 
+/* As noted abouve in the NOTES & EXIBIT section, much of the CSS code
+   is shared between the two sections.  The code below handles the
+   few differences between the two sections.
+*/
+
+/* Style the thesis section.  */
 .thesis {
   padding: 2rem 0 0 0;
   background-color: black;
@@ -571,18 +664,25 @@ a {
   border-top: thin solid gold;
 }
 
+/* Style the header for the section. */
 .thesis h1 {
   text-align: center;
 }
 
+/* Set up the margins per spec for the large lines.  */
 .exhibit h1 {
     margin: 2rem 0 2rem 0;
     text-align: left;
 }
 
+/*  Set up the margin for the video, which is unique to this section.  */
 .big-block-video {
   margin-left: 0;
 }
+
+/* Set up the container for the video.  It happens to be the same as the
+   image in the previous section however was left in to make maintenance
+   of the two sections easier.  */
 
 .big-block-video video {
   width: 100%;
@@ -599,10 +699,12 @@ a {
     display: none;
   }
 
+  /* Set up the margins for the large text per mobile spec. */
   .exhibit h1 {
     margin: 2rem 0 2rem 0;
   }
 
+  /* Set up the margins for the container per mobile spec. */
   .exhibit .big-block-container {
     width: 100%;
     margin: 2rem 0 2rem 0;
@@ -612,42 +714,71 @@ a {
 /************
    FOOTER
 ************/
+
+/* Because the footer is not part of the jumbotron, it needs to be made
+   relative in order to "slide under" the nav bar. */
+/* Set up the footer container - color and width plus add a gold divider
+   at the top. */
+/* Set up the flexbox for the inner items. */
 .footer  {
   position: relative;
   top: 4rem;
+
   border-top: 0.3rem solid gold;
   max-width: 100%;
   background-color: rgb(0, 0, 128);
+
   display: flex;
   justify-content: space-between;
 }
 
+/* Set the margins per spec. */
+/* Vertically center the copyright within it's small box.  */
 .copyright {
-  display: flex;
   height: 4rem;
   margin-left: 1.5rem;
-  align-items: center;
-}
 
-.terms-privacy {
   display: flex;
-  margin-right: 1.5rem;
   align-items: center;
 }
 
+/* Set the right margin per spec. */
+/* Verically center the Terms and Privacy links. */
+.terms-privacy {
+  margin-right: 1.5rem;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Set up spacing between Terms and Privacy. */
 .footer li:last-child {
   margin-left: 1rem;
 }
 
+/* Set up a transition for the Terms and Privacy links to change color with hover. */
+.terms-privacy li {
+    transition: color 100ms ease-in 150ms;
+}
+
+.terms-privacy li:hover {
+  color: gold;
+}
+
+
 @media only screen and (max-width: 750px) {
 
-  .footer {
-    border-top: thin solid gold;
-  }
+/* Turn off Terms & Pricacy while in mobile mode. */
   .terms-privacy {
     display: none;
   }
 
+  /* Set a pretty border at top of section. */
+  .footer {
+    border-top: thin solid gold;
+  }
+
+  /* Add padding per spec. */
   .copyright {
     padding-top: 1.7rem;
   }
